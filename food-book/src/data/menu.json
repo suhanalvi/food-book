@@ -1,0 +1,329 @@
+{
+  "_note": "DEMO CONTENT — replace names, prices, descriptions, ingredients and photos with real restaurant data. dietary / allergens are intentionally omitted until real information is provided.",
+  "categories": [
+    { "id": "coffee", "label": "Coffee" },
+    { "id": "tea", "label": "Tea" },
+    { "id": "burgers", "label": "Burgers" },
+    { "id": "patties", "label": "Patties" },
+    { "id": "pizza", "label": "Pizza" },
+    { "id": "sandwiches", "label": "Sandwiches" },
+    { "id": "snacks", "label": "Snacks" },
+    { "id": "milkshakes", "label": "Milkshakes" },
+    { "id": "cold-beverages", "label": "Cold Beverages" },
+    { "id": "pastries", "label": "Pastries" },
+    { "id": "cakes", "label": "Cakes" },
+    { "id": "desserts", "label": "Desserts" }
+  ],
+  "items": [
+    {
+      "id": "coffee",
+      "name": "Signature Latte",
+      "category": "coffee",
+      "price": 180,
+      "theme": "cream",
+      "shortDescription": "Espresso poured into silky steamed milk, finished with a hand-poured swirl.",
+      "story": "Slow-brewed coffee, rich aroma and a moment worth enjoying.",
+      "description": "A double shot of freshly pulled espresso meets steamed milk and a layer of velvety foam. Poured slowly so the crema blooms into a swirl on top.",
+      "ingredients": [
+        { "id": "beans", "label": "Roasted coffee beans" },
+        { "id": "espresso", "label": "Espresso" },
+        { "id": "milk", "label": "Steamed milk" }
+      ],
+      "preparation": "Espresso is pulled to order, milk is steamed until glossy, then poured in one continuous motion.",
+      "sizes": [
+        { "label": "Regular", "priceDelta": 0 },
+        { "label": "Large", "priceDelta": 40 }
+      ],
+      "extras": [{ "label": "Extra espresso shot", "price": 40 }],
+      "photo": { "id": 1694874, "credit": "Mwabonje Ringa / Pexels", "url": "https://www.pexels.com/photo/selective-focus-photography-of-cappuccino-1694874/" }
+    },
+    {
+      "id": "burger",
+      "name": "Classic Cheeseburger",
+      "category": "burgers",
+      "price": 320,
+      "theme": "dark",
+      "shortDescription": "A toasted sesame bun, a seared patty and cheese melted until it runs.",
+      "story": "Stacked slowly, melted properly, and built to be held with both hands.",
+      "description": "A seared patty under a blanket of melted cheese, layered with crisp lettuce, tomato slices and a house sauce, all inside a soft toasted bun.",
+      "ingredients": [
+        { "id": "bun", "label": "Sesame bun" },
+        { "id": "lettuce", "label": "Lettuce" },
+        { "id": "tomato", "label": "Tomato" },
+        { "id": "patty", "label": "Patty" },
+        { "id": "cheese", "label": "Melted cheese" },
+        { "id": "sauce", "label": "House sauce" }
+      ],
+      "preparation": "Patty seared on a hot griddle, cheese melted on top, assembled while warm.",
+      "extras": [{ "label": "Extra cheese", "price": 30 }],
+      "photo": { "id": 18867543, "credit": "Marstudio Media / Pexels", "url": "https://www.pexels.com/photo/burger-served-in-a-restaurant-18867543/" }
+    },
+    {
+      "id": "patties",
+      "name": "Golden Puff Patty",
+      "category": "patties",
+      "price": 90,
+      "theme": "ivory",
+      "shortDescription": "Flaky layered pastry folded around a warm, spiced vegetable filling.",
+      "story": "Layers of flaky pastry that shatter first and comfort second.",
+      "description": "A bakery-style patty with a crisp, golden, many-layered crust. Break it open and the warm spiced filling is waiting inside.",
+      "ingredients": [
+        { "id": "pastry", "label": "Flaky pastry" },
+        { "id": "filling", "label": "Spiced vegetable filling" }
+      ],
+      "preparation": "Baked until the crust turns deep golden and crisp.",
+      "photo": null
+    },
+    {
+      "id": "pizza",
+      "name": "Wood-Fired Pepperoni Pizza",
+      "category": "pizza",
+      "price": 449,
+      "theme": "ivory",
+      "shortDescription": "Tomato sauce, stretching mozzarella, pepperoni, olives and fresh basil.",
+      "story": "A blistered crust, a warm sweep of sauce, and the pull of a perfect slice.",
+      "description": "A hand-stretched base spread with tomato sauce and covered in cheese, topped with pepperoni, black olives and basil leaves.",
+      "ingredients": [
+        { "id": "dough", "label": "Pizza base" },
+        { "id": "sauce", "label": "Tomato sauce" },
+        { "id": "cheese", "label": "Mozzarella" },
+        { "id": "pepperoni", "label": "Pepperoni" },
+        { "id": "olives", "label": "Black olives" },
+        { "id": "basil", "label": "Basil" }
+      ],
+      "preparation": "Baked in a very hot oven until the crust blisters and the cheese bubbles.",
+      "sizes": [
+        { "label": "Medium", "priceDelta": 0 },
+        { "label": "Large", "priceDelta": 180 }
+      ],
+      "extras": [{ "label": "Extra cheese", "price": 60 }],
+      "photo": { "id": 11400975, "credit": "Pedro Ribeiro / Pexels", "url": "https://www.pexels.com/photo/close-up-shot-of-a-person-holding-a-slice-of-pizza-11400975/" }
+    },
+    {
+      "id": "milkshake",
+      "name": "Strawberry Milkshake",
+      "category": "milkshakes",
+      "price": 240,
+      "theme": "cream",
+      "shortDescription": "Cold milk blended with strawberries, crowned with whipped cream and chocolate.",
+      "story": "Cold, thick, and swirled until the straw stands tall.",
+      "description": "Milk blended with strawberry until pale pink and thick, finished with whipped cream, a chocolate drizzle and a strawberry on top.",
+      "ingredients": [
+        { "id": "milk", "label": "Cold milk" },
+        { "id": "strawberry", "label": "Strawberry" },
+        { "id": "cream", "label": "Whipped cream" },
+        { "id": "chocolate", "label": "Chocolate drizzle" }
+      ],
+      "preparation": "Blended to order and served immediately.",
+      "sizes": [
+        { "label": "Regular", "priceDelta": 0 },
+        { "label": "Large", "priceDelta": 60 }
+      ],
+      "photo": { "id": 2885916, "credit": "Luke Barky / Pexels", "url": "https://www.pexels.com/photo/woman-holding-milk-shake-2885916/" }
+    },
+    {
+      "id": "pastry",
+      "name": "Chocolate Éclair",
+      "category": "pastries",
+      "price": 160,
+      "theme": "ivory",
+      "shortDescription": "A crisp choux shell piped with cream and dipped in glossy chocolate.",
+      "story": "A crisp shell, a cloud of cream, and a glaze that catches the light.",
+      "description": "A light choux pastry filled with sweet cream, glazed with dark chocolate and finished with crushed pistachio.",
+      "ingredients": [
+        { "id": "shell", "label": "Choux pastry" },
+        { "id": "cream", "label": "Pastry cream" },
+        { "id": "glaze", "label": "Chocolate glaze" },
+        { "id": "pistachio", "label": "Crushed pistachio" }
+      ],
+      "preparation": "Shell baked crisp, filled with cream and dipped in glaze to set.",
+      "photo": { "id": 15823294, "credit": "Amirho3in tavkoli / Pexels", "url": "https://www.pexels.com/photo/dessert-with-strawberries-on-a-plate-15823294/" }
+    },
+    {
+      "id": "cake",
+      "name": "Layered Chocolate Cake",
+      "category": "cakes",
+      "price": 220,
+      "theme": "cream",
+      "shortDescription": "Chocolate sponge, cream layers, ganache and fresh strawberries.",
+      "story": "Layer by layer, a slow celebration.",
+      "description": "Three layers of chocolate sponge sandwiched with cream, covered in a glossy ganache and topped with strawberries. Priced per slice.",
+      "ingredients": [
+        { "id": "sponge", "label": "Chocolate sponge" },
+        { "id": "cream", "label": "Cream filling" },
+        { "id": "ganache", "label": "Chocolate ganache" },
+        { "id": "strawberry", "label": "Strawberries" }
+      ],
+      "preparation": "Layers assembled by hand, chilled to set, served by the slice.",
+      "photo": { "id": 37418888, "credit": "Samed Bayrak / Pexels", "url": "https://www.pexels.com/photo/decadent-chocolate-cake-with-mint-garnish-37418888/" }
+    },
+    {
+      "id": "donut",
+      "name": "Pink Glazed Donut",
+      "category": "desserts",
+      "price": 120,
+      "theme": "ivory",
+      "shortDescription": "A soft ring donut with strawberry glaze, chocolate drizzle and sprinkles.",
+      "story": "A glossy ring of sweetness, finished with a flourish of colour.",
+      "description": "A pillowy fried donut dipped in pink glaze, striped with chocolate and scattered with colourful sprinkles.",
+      "ingredients": [
+        { "id": "dough", "label": "Soft donut dough" },
+        { "id": "glaze", "label": "Pink glaze" },
+        { "id": "chocolate", "label": "Chocolate drizzle" },
+        { "id": "sprinkles", "label": "Sprinkles" }
+      ],
+      "preparation": "Fried golden, dipped in glaze while warm, finished with toppings.",
+      "photo": { "id": 35081225, "credit": "Andréa Devillier / Pexels", "url": "https://www.pexels.com/photo/colorful-sprinkled-donuts-with-pink-background-35081225/" }
+    },
+    {
+      "id": "sandwich",
+      "name": "Garden Club Sandwich",
+      "category": "sandwiches",
+      "price": 210,
+      "theme": "cream",
+      "shortDescription": "Toasted bread layered with cheese, tomato, cucumber and crisp lettuce.",
+      "story": "Toasted, stacked, and cut on the diagonal, because that's how it tastes best.",
+      "description": "Grilled bread layered with lettuce, tomato, cucumber and cheese, cut in half and held together with a toothpick.",
+      "ingredients": [
+        { "id": "bread", "label": "Toasted bread" },
+        { "id": "lettuce", "label": "Lettuce" },
+        { "id": "tomato", "label": "Tomato" },
+        { "id": "cheese", "label": "Cheese" },
+        { "id": "cucumber", "label": "Cucumber" }
+      ],
+      "preparation": "Bread toasted on a grill, layered cold and cut to order.",
+      "photo": { "id": 6416558, "credit": "rajdeepcraft / Pexels", "url": "https://www.pexels.com/photo/a-close-up-shot-of-delicious-sandwiches-6416558/" }
+    },
+    {
+      "id": "fries",
+      "name": "Crispy French Fries",
+      "category": "snacks",
+      "price": 150,
+      "theme": "ivory",
+      "shortDescription": "Golden fries, salted while hot, with a ketchup dip.",
+      "story": "Golden, salted while hot, gone before the conversation ends.",
+      "description": "Thin-cut potatoes fried until golden and crisp, tossed with salt and served in a carton with ketchup.",
+      "ingredients": [
+        { "id": "potato", "label": "Potato" },
+        { "id": "salt", "label": "Salt" },
+        { "id": "ketchup", "label": "Ketchup" }
+      ],
+      "preparation": "Fried until crisp, salted straight from the fryer.",
+      "extras": [{ "label": "Extra dip", "price": 20 }],
+      "photo": { "id": 27758755, "credit": "Ali Dashti / Pexels", "url": "https://www.pexels.com/photo/french-fries-in-a-box-on-a-pink-background-27758755/" }
+    },
+    {
+      "id": "tea",
+      "name": "Glass-Brewed Tea",
+      "category": "tea",
+      "price": 90,
+      "theme": "cream",
+      "shortDescription": "Tea leaves steeped in hot water in a glass, with a slice of lemon.",
+      "story": "A quiet cup: leaves unfurling, colour blooming, time slowing down.",
+      "description": "Tea leaves steeped in a clear glass so you can watch the colour bloom, served with a slice of lemon.",
+      "ingredients": [
+        { "id": "leaves", "label": "Tea leaves" },
+        { "id": "water", "label": "Hot water" },
+        { "id": "lemon", "label": "Lemon slice" }
+      ],
+      "preparation": "Steeped to order in a glass.",
+      "sizes": [
+        { "label": "Cup", "priceDelta": 0 },
+        { "label": "Pot for two", "priceDelta": 90 }
+      ],
+      "photo": { "id": 27385918, "credit": "Mustafa Akın / Pexels", "url": "https://www.pexels.com/photo/a-cup-of-tea-with-a-spoon-and-a-bottle-of-honey-27385918/" }
+    },
+    {
+      "id": "coldcoffee",
+      "name": "Iced Cold Coffee",
+      "category": "cold-beverages",
+      "price": 200,
+      "theme": "dark",
+      "shortDescription": "Coffee poured over cold milk and ice, in layers.",
+      "story": "Ice, milk and coffee in layers — meant to be admired for exactly one sip.",
+      "description": "Cold milk and ice in a tall glass with chilled coffee poured over so the layers cascade, finished with cocoa dust.",
+      "ingredients": [
+        { "id": "ice", "label": "Ice" },
+        { "id": "milk", "label": "Cold milk" },
+        { "id": "coffee", "label": "Chilled coffee" },
+        { "id": "cocoa", "label": "Cocoa dust" }
+      ],
+      "preparation": "Built in the glass, served with a straw.",
+      "sizes": [
+        { "label": "Regular", "priceDelta": 0 },
+        { "label": "Large", "priceDelta": 50 }
+      ],
+      "photo": { "id": 38028984, "credit": "Elle Kwee / Pexels", "url": "https://www.pexels.com/photo/refreshing-iced-coffee-in-tall-glass-38028984/" }
+    },
+    {
+      "id": "cookies",
+      "name": "Chocolate Chip Cookies",
+      "category": "desserts",
+      "price": 110,
+      "theme": "ivory",
+      "shortDescription": "Three cookies with soft centres, crisp edges and chocolate chunks.",
+      "story": "Soft centres, crisp edges, and chocolate that never quite sets.",
+      "description": "A plate of three cookies baked until golden at the edges, loaded with chocolate chips. Priced per plate.",
+      "ingredients": [
+        { "id": "dough", "label": "Cookie dough" },
+        { "id": "chips", "label": "Chocolate chips" }
+      ],
+      "preparation": "Baked in small batches.",
+      "photo": { "id": 31323236, "credit": "Shivam Patil / Pexels", "url": "https://www.pexels.com/photo/delicious-homemade-chocolate-chip-cookies-31323236/" }
+    },
+    {
+      "id": "brownies",
+      "name": "Fudge Brownies",
+      "category": "desserts",
+      "price": 140,
+      "theme": "dark",
+      "shortDescription": "Dense chocolate brownies with walnuts, powdered sugar and warm sauce.",
+      "story": "Dense, dark and dusted with sugar — a square of pure indulgence.",
+      "description": "Rich, fudgy chocolate brownies cut into squares, topped with walnut pieces, dusted with powdered sugar and drizzled with chocolate sauce.",
+      "ingredients": [
+        { "id": "chocolate", "label": "Chocolate brownie" },
+        { "id": "walnut", "label": "Walnut pieces" },
+        { "id": "sugar", "label": "Powdered sugar" },
+        { "id": "sauce", "label": "Chocolate sauce" }
+      ],
+      "preparation": "Baked in a tin, cooled, cut into squares and finished to order.",
+      "photo": { "id": 19846422, "credit": "Yousif Idrees / Pexels", "url": "https://www.pexels.com/photo/top-view-of-cake-slices-on-a-tray-19846422/" }
+    },
+    {
+      "id": "icecream",
+      "name": "Triple Scoop Cone",
+      "category": "desserts",
+      "price": 160,
+      "theme": "cream",
+      "shortDescription": "Vanilla, strawberry and chocolate on a waffle cone, with sauce and a cherry.",
+      "story": "Three scoops, one cone, and a race against the sun.",
+      "description": "Three scoops — vanilla, strawberry and chocolate — stacked on a crisp waffle cone, with chocolate sauce and a cherry on top.",
+      "ingredients": [
+        { "id": "cone", "label": "Waffle cone" },
+        { "id": "vanilla", "label": "Vanilla scoop" },
+        { "id": "strawberry", "label": "Strawberry scoop" },
+        { "id": "chocolate", "label": "Chocolate scoop" },
+        { "id": "cherry", "label": "Cherry" }
+      ],
+      "preparation": "Scooped to order onto a fresh cone.",
+      "photo": { "id": 5535554, "credit": "Galileo Giglio / Pexels", "url": "https://www.pexels.com/photo/a-close-up-shot-of-a-scooped-ice-cream-5535554/" }
+    },
+    {
+      "id": "garlicbread",
+      "name": "Garlic Bread",
+      "category": "snacks",
+      "price": 170,
+      "theme": "ivory",
+      "shortDescription": "Sliced baguette brushed with garlic butter and scattered with parsley.",
+      "story": "Warm from the oven, brushed with butter, torn apart without apology.",
+      "description": "A baguette sliced and brushed with garlic butter, baked until the edges crisp, and finished with fresh parsley.",
+      "ingredients": [
+        { "id": "bread", "label": "Baguette" },
+        { "id": "butter", "label": "Garlic butter" },
+        { "id": "parsley", "label": "Parsley" }
+      ],
+      "preparation": "Sliced, buttered and baked until golden.",
+      "photo": { "id": 9951852, "credit": "Rajan Gaur / Pexels", "url": "https://www.pexels.com/photo/a-cheesy-garlic-bread-on-a-ceramic-plate-9951852/" }
+    }
+  ]
+}

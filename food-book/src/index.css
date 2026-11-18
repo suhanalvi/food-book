@@ -1,0 +1,271 @@
+@import "tailwindcss";
+
+@theme {
+  --font-serif: "Cormorant Garamond", "Iowan Old Style", Georgia, serif;
+  --font-sans: "Inter", ui-sans-serif, system-ui, -apple-system, "Segoe UI", sans-serif;
+}
+
+:root {
+  --paper: #f7f3eb;
+  --cream: #eee5d8;
+  --ink: #2d211c;
+  --terracotta: #b66a4b;
+  --sage: #69765b;
+  --dark: #25201d;
+  --page-bg: var(--paper);
+  --page-ink: var(--ink);
+  --page-muted: color-mix(in srgb, var(--ink) 62%, transparent);
+  --page-line: color-mix(in srgb, var(--ink) 18%, transparent);
+  --page-tint: color-mix(in srgb, var(--terracotta) 14%, transparent);
+}
+
+html {
+  scrollbar-gutter: stable;
+  background: var(--paper);
+}
+body {
+  margin: 0;
+  font-family: var(--font-sans);
+  color: var(--ink);
+  background: var(--paper);
+  -webkit-font-smoothing: antialiased;
+  overflow-x: hidden;
+}
+
+/* ───────── Focus ───────── */
+:focus-visible {
+  outline: 2px solid var(--terracotta);
+  outline-offset: 3px;
+  border-radius: 4px;
+}
+
+/* ───────── Page themes ───────── */
+[data-theme="ivory"] {
+  --page-bg: var(--paper);
+  --page-ink: var(--ink);
+  --page-muted: color-mix(in srgb, var(--ink) 64%, transparent);
+  --page-line: color-mix(in srgb, var(--ink) 18%, transparent);
+  --page-tint: color-mix(in srgb, var(--terracotta) 13%, transparent);
+}
+[data-theme="cream"] {
+  --page-bg: var(--cream);
+  --page-ink: var(--ink);
+  --page-muted: color-mix(in srgb, var(--ink) 66%, transparent);
+  --page-line: color-mix(in srgb, var(--ink) 20%, transparent);
+  --page-tint: color-mix(in srgb, var(--sage) 18%, transparent);
+}
+[data-theme="dark"] {
+  --page-bg: var(--dark);
+  --page-ink: #f4ece0;
+  --page-muted: rgba(244, 236, 224, 0.68);
+  --page-line: rgba(244, 236, 224, 0.2);
+  --page-tint: color-mix(in srgb, var(--terracotta) 26%, transparent);
+}
+
+/* paper grain (inline SVG noise) */
+.paper-grain::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  opacity: 0.5;
+  mix-blend-mode: multiply;
+  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='220' height='220'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='2' stitchTiles='stitch'/><feColorMatrix values='0 0 0 0 .35  0 0 0 0 .25  0 0 0 0 .18  0 0 0 .09 0'/></filter><rect width='100%' height='100%' filter='url(%23n)'/></svg>");
+}
+[data-theme="dark"].paper-grain::before {
+  mix-blend-mode: screen;
+  opacity: 0.35;
+}
+
+/* spine gutter shading on every leaf */
+.gutter::after {
+  content: "";
+  position: absolute;
+  inset: 0 auto 0 0;
+  width: min(9vw, 120px);
+  pointer-events: none;
+  background: linear-gradient(90deg, rgba(40, 24, 14, 0.22), rgba(40, 24, 14, 0.06) 40%, transparent);
+}
+
+/* ───────── Type ───────── */
+.label {
+  font-family: var(--font-sans);
+  font-size: 0.68rem;
+  letter-spacing: 0.24em;
+  text-transform: uppercase;
+  font-weight: 500;
+}
+.serif {
+  font-family: var(--font-serif);
+}
+
+/* ───────── Reveal choreography (driven by data-play) ───────── */
+.reveal {
+  opacity: 0;
+  transform: translateY(18px);
+  transition: opacity 0.7s cubic-bezier(0.2, 0.7, 0.2, 1), transform 0.9s cubic-bezier(0.2, 0.7, 0.2, 1);
+  transition-delay: calc(var(--d, 0) * 1ms);
+}
+[data-play="true"] .reveal {
+  opacity: 1;
+  transform: none;
+}
+.reduce-motion .reveal {
+  opacity: 1 !important;
+  transform: none !important;
+  transition: none !important;
+}
+
+/* ───────── Scene ingredient highlighting ───────── */
+.scene-svg {
+  overflow: visible;
+}
+.scene-svg [data-ing] {
+  transition: filter 0.4s ease;
+}
+.scene-svg.has-hl [data-ing] {
+  filter: grayscale(0.85) opacity(0.35);
+}
+.scene-svg.has-hl [data-ing].hl {
+  filter: drop-shadow(0 0 10px rgba(255, 244, 214, 0.95)) drop-shadow(0 0 22px rgba(255, 220, 150, 0.7)) saturate(1.2) brightness(1.08);
+}
+
+/* ───────── Buttons ───────── */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+  font-size: 0.7rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  font-weight: 500;
+  padding: 0.85rem 1.3rem;
+  border: 1px solid currentColor;
+  border-radius: 999px;
+  background: transparent;
+  color: inherit;
+  cursor: pointer;
+  transition: background 0.25s, color 0.25s, border-color 0.25s, transform 0.25s;
+}
+.btn:hover {
+  background: var(--terracotta);
+  border-color: var(--terracotta);
+  color: #fff;
+}
+.btn-solid {
+  background: var(--terracotta);
+  border-color: var(--terracotta);
+  color: #fff;
+}
+.btn-solid:hover {
+  background: var(--ink);
+  border-color: var(--ink);
+}
+
+.steam-blur {
+  filter: blur(3px);
+}
+
+@keyframes bob {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(7px); }
+}
+.bob {
+  animation: bob 1.8s ease-in-out infinite;
+}
+.reduce-motion .bob {
+  animation: none;
+}
+
+/* custom scrollbar for panels */
+.panel-scroll {
+  overscroll-behavior: contain;
+  scrollbar-width: thin;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+}
+
+/* ───────── Physical page-turn material ─────────
+   --turn  0→1 rotation progress, --curl sin(progress) peak at mid-turn */
+.leaf {
+  box-shadow: 0 18px 60px rgba(0, 0, 0, 0.45), 0 2px 0 rgba(255, 255, 255, 0.06);
+  transform-style: preserve-3d;
+}
+.leaf-shade {
+  background-image: linear-gradient(
+    calc(102deg - var(--turn, 0) * 46deg),
+    rgba(22, 10, 4, 0.66) 0%,
+    rgba(22, 10, 4, 0.2) 30%,
+    rgba(255, 252, 244, 0.1) 72%,
+    rgba(255, 252, 244, 0.34) 100%
+  );
+}
+/* specular curl band riding the turning edge */
+.leaf-curl {
+  background-image: linear-gradient(
+    90deg,
+    rgba(255, 250, 236, 0) 0%,
+    rgba(255, 250, 236, 0.1) 45%,
+    rgba(255, 252, 244, 0.42) 86%,
+    rgba(255, 255, 255, 0.72) 100%
+  );
+  opacity: var(--curl, 0);
+}
+/* paper edge thickness while the leaf is in the air */
+.leaf-edge {
+  background-image: linear-gradient(90deg, rgba(214, 198, 172, 0) 0%, rgba(240, 230, 210, 0.9) 60%, rgba(255, 252, 244, 0.95) 100%);
+  box-shadow: -1px 0 2px rgba(40, 22, 10, 0.35);
+  opacity: var(--curl, 0);
+}
+/* shadow the turning leaf casts on the page beneath it */
+.leaf-cast {
+  background-image: linear-gradient(90deg, rgba(16, 8, 3, 0.72) 0%, rgba(16, 8, 3, 0.4) 26%, rgba(16, 8, 3, 0.12) 55%, transparent 78%);
+}
+
+/* ───────── Photographic plates ───────── */
+.photo-grade {
+  filter: saturate(1.03) contrast(1.05) sepia(0.06) brightness(1.01);
+}
+.photo-plate::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  pointer-events: none;
+  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='160' height='160'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='2' stitchTiles='stitch'/><feColorMatrix values='0 0 0 0 .3  0 0 0 0 .22  0 0 0 0 .14  0 0 0 .12 0'/></filter><rect width='100%' height='100%' filter='url(%23n)'/></svg>");
+  mix-blend-mode: multiply;
+  opacity: 0.55;
+}
+.photo-zoom img {
+  transition: transform 0.7s cubic-bezier(0.2, 0.7, 0.2, 1);
+}
+.photo-zoom.is-zoom img {
+  transition: transform 0.25s ease-out;
+}
+
+/* medallion lift */
+.medallion {
+  transition: transform 0.8s cubic-bezier(0.2, 0.7, 0.2, 1), box-shadow 0.8s ease;
+}
+.group:hover .medallion {
+  transform: translateY(-4px) scale(1.012);
+}
+
+/* page-number roll */
+.roll {
+  position: relative;
+  display: inline-block;
+  height: 1em;
+  width: 2ch;
+  overflow: hidden;
+  vertical-align: baseline;
+}
+.roll > span {
+  position: absolute;
+  inset: 0;
+  text-align: right;
+}
